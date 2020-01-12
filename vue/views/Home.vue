@@ -42,6 +42,9 @@
         created() {
             console.log('index created');
         },
+        component: {
+            component
+        },
         methods: {
             getList() {
                 axios.get('https://www.forguo.com/api/express/list?pageNum=1&pageSize=10').then(res => {

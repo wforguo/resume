@@ -21,18 +21,34 @@
         this.initEvent();
     };
 
+    // observe观察数据
     Vue.prototype.observe = function (data) {
+        let that = this;
         if (!data || typeof data !== 'object') {
             return false;
         }
 
         // 遍历data，将原来所有属性改成set和get的形式
         // 先获取到数据的key和value
-        Object.keys(data).forEach((key) => {
-            if (typeof data[key] === 'object') {
-                this.observe(data[key]);
-            } else {
-                this.defineReactive(data, key, data[key]);
+        // Object.keys(data).forEach((key) => {
+        //     if (typeof data[key] === 'object') {
+        //         // 如果是对象，则继续去遍历他的属性
+        //         // data[key]充当一个中间变量
+        //         this.observe(data[key]);
+        //     } else {
+        //         this.defineReactive(data, key, data[key]);
+        //     }
+        // });
+
+        // 使用代理，重写data
+        // Vue3使用proxy的方式
+        this.$data = new Proxy(this.$data, {
+            get(target, key, receiver) {
+                return target[key];
+            },
+            set(target, key, value, receiver) {
+                that.render(value);
+                return Reflect.set(target, key, value);
             }
         });
     };
@@ -47,6 +63,8 @@
             enumerable: true, // 可遍历
             configurable: true, // 可删除
             get() {
+                // 此处省略收集依赖
+                // 收集对应的变量再哪些地方用到了
                 console.log('get', value);
                 return value;
             },
@@ -54,6 +72,7 @@
                 console.log('set', newValue);
                 value = newValue;
                 // 数据改变，触发dom渲染
+                // 触发收集依赖后的更新
                 that.render(newValue);
             }
         });
@@ -65,23 +84,15 @@
             this.$data.name = 'Hello Vue Data!';
         });
         document.getElementById('get').addEventListener('click', () => {
-            console.log(this.$data);
+            console.log(this.$data.name);
         });
     };
 
     // 渲染dom
     Vue.prototype.render = function (newValue) {
-        console.log('renderDom:', newValue);
         this.$em.innerHTML = newValue;
     };
 
-    new Vue({
-        el: 'app',
-        data: {
-            name: 'forguo',
-            grade: {
-                sex: 'man'
-            },
-        }
-    });
+    // 将Vue暴露出去
+    window.Vue = Vue;
 })();

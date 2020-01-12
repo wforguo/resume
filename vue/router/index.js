@@ -37,9 +37,9 @@ let routes = [
  */
 
 // require.context(
-//   directory: String,
-//   includeSubdirs: Boolean /* optional, default true */,
-//   filter: RegExp /* optional, default /^\.\/.*$/, any file */,
+//   directory: String, 要搜索的文件夹目录
+//   includeSubdirs: Boolean /* optional, default true */, 搜索它的子目录
+//   filter: RegExp /* optional, default /^\.\/.*$/, any file */, 匹配文件的正则表达式
 //   mode: String  /* optional, 'sync' | 'eager' | 'weak' | 'lazy' | 'lazy-once', default 'sync' */
 // )
 

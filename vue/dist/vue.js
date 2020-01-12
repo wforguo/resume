@@ -1039,6 +1039,8 @@
       get: function reactiveGetter () {
         var value = getter ? getter.call(obj) : val;
         if (Dep.target) {
+            // 此处会收集依赖
+            // 收集对应的变量再哪些地方用到了
           dep.depend();
           if (childOb) {
             childOb.dep.depend();
@@ -1067,6 +1069,7 @@
           val = newVal;
         }
         childOb = !shallow && observe(newVal);
+        // 对收集到的依赖来触发更新
         dep.notify();
       }
     });
