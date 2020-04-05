@@ -39,6 +39,7 @@
                 // this.list[index].count++;
                 // this.list[index].price = index + 100;
                 // 不能直接去修改数组的某个项，或者直接删除、添加对象的属性，需要借助$set去实现
+                // 直接修改，视图是不会更新的
                 // this.$set(arrayList, index, value)l
                 // this.$set(object, key, value);
                 this.$set(this.list[index], 'price', index + Math.random());
