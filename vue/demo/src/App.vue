@@ -1,16 +1,16 @@
 <template>
     <div id="app">
-        <List msg="Welcome to Your Vue.js App"/>
+        <keep-alive>
+            <router-view></router-view>
+        </keep-alive>
     </div>
 </template>
 
 <script>
-    import List from './components/List.vue'
 
     export default {
         name: 'App',
         components: {
-            List
         }
     }
 </script>
