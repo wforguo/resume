@@ -80,13 +80,15 @@
                 //     console.log(res);
                 // });
                 const file = e.target.files[0];
-                const data = new FormData();
-                data.append('file', file);
-                instance.post('http://192.168.40.234:3300/api/common/imgUpload', data).then(res => {
-                    console.log(res);
-                }).catch(err => {
-                    console.log(err);
-                });
+                if (file) {
+                    const data = new FormData();
+                    data.append('file', file);
+                    instance.post('http://localhost:3300/api/common/imgUpload', data).then(res => {
+                        console.log(res);
+                    }).catch(err => {
+                        console.log(err);
+                    });
+                }
             },
             handleClick(index) {
                 console.log(index);
