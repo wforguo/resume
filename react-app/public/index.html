@@ -26,7 +26,7 @@
 </head>
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
-<div id="root"></div>
+<div id="root" ></div>
 <!--
   This HTML file is a template.
   If you open it directly in the browser, you will see an empty page.
@@ -38,13 +38,4 @@
   To create a production bundle, use `npm run build` or `yarn build`.
 -->
 </body>
-<script src="http://api.map.baidu.com/getscript?v=2.0&ak=243f68afdbfe0aa70ca23117c4606b94&services=&t=20170707103901&s=1"></script>
-<script>
-    let city = new BMap.LocalCity();
-    function myFun(result) {
-        let cityName = result.name
-        console.log('result', result)
-    }
-    city.get(myFun)
-</script>
 </html>
