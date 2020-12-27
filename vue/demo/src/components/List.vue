@@ -1,6 +1,8 @@
 <template>
     <div class="list">
-        <h1>{{ msg }}</h1>
+        <h3><code>$set使用</code></h3>
+        <hr>
+
         <div class="list-item" v-for="(item, index) in list" :key="index">
             <h3><span v-if="item.price">$:{{item.price}} </span>
                 {{item.name}} <i>{{item.count}}</i>
@@ -95,11 +97,11 @@
                 /**
                  * 如下：直接修改，视图是不会更新的
                  */
-                // this.items[index] = index + Math.random();
+                this.items[index] = index + Math.random();
 
                 // 使用Vue.set，
                 // this.$set(vm.items, indexOfItem, newValue)
-                this.$set(this.items, index, Math.random());
+                // this.$set(this.items, index, Math.random());
             },
             checkDetail() {
                 console.log('detail');
@@ -109,15 +111,18 @@
             },
             check(index) {
                 /**
+                 * 可以更新视图
+                 * /
+                 *
+                // this.list[index].count++; // 已存在的字段
+                /**
                  * 如下：直接修改，视图是不会更新的
                  */
-                 // this.list[index].count++;
-                 // this.list[index].price = index + 100;
+                 // this.list[index].price = index + 100; // 不存在的字段
 
                 /**
                  *  不能直接去修改数组的某个项，或者直接删除、添加对象的属性，需要借助$set去实现
                  */
-
                 /**
                  * 对于数组，Vue 不能检测以下数组的变动：
                  * 1. 当你利用索引直接设置一个数组项时，例如：vm.items[indexOfItem] = newValue

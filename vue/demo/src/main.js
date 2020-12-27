@@ -4,10 +4,12 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 import List from './components/List';
 import Detail from './components/Detail';
+import Request from './components/Request';
 const routes = [
     { path: '/', component: List },
     { path: '/list', component: List },
-    { path: '/detail',  component: Detail}
+    { path: '/detail',  component: Detail},
+    { path: '/request',  component: Request}
 ];
 
 Vue.config.productionTip = false;
