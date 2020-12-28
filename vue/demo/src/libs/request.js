@@ -14,7 +14,7 @@ class request {
         return instance(config); // 返回axios实例的执行结果
     }
     setInterceptors (instance) {
-        instance.interceptors.request.use((config)=> {
+        instance.interceptors.request.use((config) => {
             return config;
         }, err => {
             return Promise.reject(err);

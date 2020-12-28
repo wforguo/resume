@@ -1,26 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
-
-@wforguo
-chokcoco
-/
-jQuery-
-167
-1.9k762
-Code Issues 3 Pull requests 0 Actions Projects 0 Wiki Security Insights
-jQuery-/jquery-1.10.2__read.js /
-@chokcoco chokcoco update index()
-35f9a67 on 6 Jun 2017
-11529 lines (9911 sloc)  387 KB
-
-
-You're using code navigation to jump to definitions or references.
-Learn more or give us feedback
 /*!
  * jQuery JavaScript Library v1.10.2
  * http://jquery.com/
