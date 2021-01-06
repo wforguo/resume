@@ -16,8 +16,3 @@ yarn-error.log*
 .idea
 /.idea
 .vscode
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
