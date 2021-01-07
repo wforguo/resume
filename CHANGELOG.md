@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/wforguo/study/compare/v1.1.5...v1.2.0) (2021-01-07)
+
+
+### Features
+
+* 修改nginx ([3484dd9](https://github.com/wforguo/study/commit/3484dd99e447f43857161559a2fce1e4fdd53a88))
+
 ### [1.1.5](https://github.com/wforguo/study/compare/v1.1.4...v1.1.5) (2021-01-07)
 
 ### [1.1.4](https://github.com/wforguo/study/compare/v1.1.3...v1.1.4) (2021-01-07)
