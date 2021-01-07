@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/wforguo/study/compare/v2.1.0...v3.0.0) (2021-01-07)
+
 ## [2.1.0](https://github.com/wforguo/study/compare/v1.5.0...v2.1.0) (2021-01-07)
 
 ## [1.1.0](https://github.com/wforguo/study/compare/v1.5.0...v1.1.0) (2021-01-07)
