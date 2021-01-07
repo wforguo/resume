@@ -1,0 +1,32 @@
+{
+    "name": "study",
+    "version": "1.0.0",
+    "description": "平时的学习代码及Demo",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "commit": "git cz",
+        "release": "standard-version"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wforguo/study.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/wforguo/study/issues"
+    },
+    "homepage": "https://github.com/wforguo/study#readme",
+    "devDependencies": {
+        "commitizen": "^4.2.2",
+        "cz-conventional-changelog": "^3.3.0",
+        "cz-customizable": "^6.3.0",
+        "standard-version": "^9.1.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "cz-conventional-changelog"
+        }
+    }
+}
