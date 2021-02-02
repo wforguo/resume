@@ -1,6 +1,6 @@
 {
     "name": "study",
-    "version": "1.6.8",
+    "version": "2.0.0",
     "description": "平时的学习代码及Demo",
     "main": "index.js",
     "scripts": {
