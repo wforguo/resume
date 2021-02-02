@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.4](https://github.com/wforguo/study/compare/v1.4.4-alpha.0...v1.4.4) (2021-02-02)
+
 ### [1.4.4-alpha.0](https://github.com/wforguo/study/compare/v1.4.4-rc.0...v1.4.4-alpha.0) (2021-02-02)
 
 ### [1.4.4-rc.0](https://github.com/wforguo/study/compare/v3.0.0...v1.4.4-rc.0) (2021-02-02)
