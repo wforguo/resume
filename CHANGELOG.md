@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/wforguo/study/compare/v1.4.5...v1.6.0) (2021-02-02)
+
+
+### Features
+
+* add ([68a1f94](https://github.com/wforguo/study/commit/68a1f940ef1b9b048602965426967c8d0c58319b))
+
 ## [1.5.0](https://github.com/wforguo/study/compare/v1.4.5...v1.5.0) (2021-02-02)
 
 
