@@ -6,21 +6,20 @@
 
 <script>
 
-import request from '../libs/request';
+import request from '../../libs/request';
 import * as qs from "qs";
 
 export default {
-    name: "request",
+    name: "Request",
     mounted() {
-        console.log('request');
         request.request({
             method: 'post',
-            url: 'https://api.cloud-app.com.cn/wechat/jssdk/share',
+            url: '/api/weixin/share',
             data: qs.stringify({
                 url: window.location.href
             })
         }).then((res) => {
-            console.log(res);
+            console.log(res.data);
         }, (err) => {
             console.log(err);
         });

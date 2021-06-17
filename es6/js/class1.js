@@ -9,7 +9,7 @@ class People {
     }
 }
 
-class Student extends People{
+class Student extends People {
     constructor(name, gender, stno) {
         super(name, gender);
         this.stno = stno;
