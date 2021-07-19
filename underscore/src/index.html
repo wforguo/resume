@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>underscore</title>
 </head>
 <body>
-$END$
+<h4>underscore</h4>
 </body>
+<script src="./underscore.js"></script>
+<script type="text/javascript">
+    var arr = [1,2,3,4,5];
+    console.log(_(arr).chain());
+
+    var flattenArr = [1, [2, 3, [5, 6]], [7]];
+    console.log(_._flatten(flattenArr, false))
+</script>
 </html>

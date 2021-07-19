@@ -3,7 +3,9 @@
 * @author forguo
 * @time 2017-12-13
 * [我的博客](http://blog.csdn.net/weiguo19951107)
+
 ----
+
 ##### 基于jQuery的轮播插件
 
     所有功能基于jQuery开实现，整个的开发基于面向对象的思想来操作实现；

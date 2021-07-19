@@ -47,7 +47,7 @@
 				'width': that.width * newSize,
 				'left': 0 - that.width
 			});
-			
+
 			for(i = 0; i < this.size; i++) {
 				$(".paging").append($("<li></li>"));
 			}
@@ -126,7 +126,7 @@
 			that.$element.on('mouseleave', that.$element.find('.carousel-item'), function() {
 				that.autoSlide();
 			})
-			
+
 			// 分页
 			that.$element.find(that.defaults.paging).on('click','li',function(){
 				var $pageBtn = $(this);
@@ -146,9 +146,9 @@
 					that.changePageNum(that.index);
 				});
 			})
-			
+
 		},
-		
+
 		// 改变分页选择器
 		changePageNum: function(crrent_page) {
 			var $pageBtn = $(this.defaults.paging).find('li');
@@ -157,7 +157,13 @@
 	}
 
 	// 在插件中使用  Carousel 对象
-	$.fn.Carousel = function(options) {
-		return new Carousel(this, options);
-	}
+	// $.fn.Carousel = function(options) {
+	// 	return new Carousel(this, options);
+	// }
+
+    $.fn.extend({
+        Carousel(options) {
+            return new Carousel(this, options);
+        }
+    })
 })(jQuery, window, document)
